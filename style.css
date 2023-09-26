@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@200;300;500;700&display=swap");
+
+/* 
+font-family: 'Inria Serif', serif;
+font-family: 'Inter', sans-serif; */
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  line-height: 2;
+  font-family: "inter", sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Inria Serif", serif;
+  font-weight: 500;
+}
+
+.navbar-a {
+  width: 100vw;
+  height: 70px;
+  background-color: teal;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.navbar_wrapper {
+  width: inherit;
+  height: inherit;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.navbar_wrapper a:hover {
+  background-color: initial; /* Mengembalikan warna latar belakang ke nilai awal */
+  color: initial; /* Mengembalikan warna teks ke nilai awal */
+  text-decoration: none; /* Menghilangkan dekorasi teks seperti underlined */
+  /* Tambahan properti lainnya yang ingin Anda reset */
+}
+
+.brand {
+  font-size: 32px;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Inria Serif", serif;
+  font-weight: 500;
+}
+
+.navbar_menu {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  margin-right: 10px;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 128, 128, 0.858);
+    z-index: 2;
+  }
+
+  .navbar_menu.active {
+    display: flex;
+  }
+
+  .navbar_menu a {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  .navbar_menu a:hover {
+    background-color: #1b6e7d;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .section_content {
+    padding: 10px;
+  }
+  /* 
+  img {
+    max-width: 100%;
+    height: auto;
+  } */
+
+  .hero {
+    height: auto; /* Mengubah tinggi hero sesuai kontennya */
+    background-size: contain; /* Sesuaikan ukuran gambar latar belakang */
+  }
+
+  .hero #typing-text {
+    font-size: 50px; /* Ubah ukuran font sesuai keinginan Anda */
+  }
+
+  .hero marquee {
+    /* margin-bottom: -10px; */
+    position: relative;
+    top: -30px;
+    width: 100vw;
+  }
+
+  .section_title {
+    font-size: 32px;
+  }
+
+  .footer .footer-right {
+    display: none;
+  }
+
+  .footer-left {
+    margin: -90px;
+  }
+}
+
+.hero marquee {
+  /* margin-bottom: 10px; */
+  margin-top: -10px;
+}
+
+.container1 {
+  min-height: 600vh;
+}
+
+.hero {
+  width: 100vw;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("assets/gedung1.jpeg");
+  background-size: cover;
+  background-position: center;
+  transition-duration: 5s;
+}
+
+.hero p {
+  font-size: 32px;
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: 96px;
+  text-shadow: 5px 5px 10px black;
+  margin: 0;
+}
+
+.hero #typing-text {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-right: 3px solid #000; */
+}
+
+.hero:hover {
+  background-position: bottom;
+}
+
+section {
+  width: 100vw;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.section_title {
+  font-size: 64px;
+}
+
+.section_wrapper {
+  width: inherit;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.section_wrapper_sejarah {
+  width: inherit;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.section_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#misi {
+  text-align: justify;
+}
+
+.section_content h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.section_content p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.form_wrapper {
+  width: inherit;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/265916/pexels-photo-265916.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-size: cover;
+  background-position: center;
+}
+
+/* tabel */
+/* Gaya tabel utama */
+.fasilitas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Gaya header tabel */
+.fasilitas th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Gaya baris ganjil */
+.fasilitas tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Gaya baris genap */
+.fasilitas tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Gaya sel dalam tabel */
+.fasilitas td {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Gaya saat mouse hover */
+.fasilitas tr:hover {
+  background-color: #e2e2e2;
+}
+
+/* end tabel */
+
+.card {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s; /* Efek perubahan transisi */
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Membagi container menjadi tiga kolom setiap baris */
+  gap: 20px; /* Jarak antara card */
+  justify-content: center;
+  align-items: center; /* Tengahkan secara vertikal */
+  width: 900px;
+  margin-left: 90px;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Perbesar card saat hover */
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-text {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* footer {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  margin-top: 100px;
+} */
+
+/* ... CSS sebelumnya ... */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Memisahkan konten di sebelah kiri dan kanan */
+  align-items: center; /* Memusatkan vertikal */
+  padding: 20px 0; /* Padding di atas dan bawah */
+  height: 300px; /* Tinggi footer 300px */
+  width: 100vw;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1; /* Memiliki lebar fleksibel */
+  text-align: center; /* Menengahkan teks secara horizontal */
+  padding-left: 200px;
+}
+
+.footer-left {
+  text-align: left; /* Untuk konten di sebelah kiri */
+}
+
+.footer h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 16px;
+  margin: 5px 0;
+}
