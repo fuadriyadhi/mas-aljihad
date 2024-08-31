@@ -47,7 +47,7 @@ h3 {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar_wrapper {
@@ -342,7 +342,9 @@ section {
 }
 
 .card:hover {
-  transform: scale(1.05); /* Perbesar card saat hover */
+  transform: scale(1.25); /* Perbesar card saat hover */
+  z-index: 1;
+  transition: ease-in-out 2s;
 }
 
 .card-img {
