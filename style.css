@@ -161,6 +161,10 @@ h3 {
     /* width: 100vw; */
   }
 
+  #show-more-btn {
+    margin-bottom: 20px;
+  }
+
   .section_title {
     font-size: 32px;
   }
