@@ -11,6 +11,7 @@ font-family: 'Inter', sans-serif; */
 
 html {
   scroll-behavior: smooth;
+  display: block;
 }
 
 body {
@@ -129,6 +130,10 @@ h3 {
 
   .navbar_menu a:hover {
     background-color: #1b6e7d;
+  }
+
+  .brand {
+    margin-left: 20px;
   }
 
   .menu-toggle {
